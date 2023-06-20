@@ -1,5 +1,5 @@
-# BookListProject
-# Booklist App
+
+# MyBooklist App
 
 This project is a booklisting application that helps users keep track of their personal books, record ratings, and express their opinions. The app allows users to easily search for books, add them to their booklist, and manage their reviews. The project is built with the Vite framework and the React library, and utilizes Firebase for authentication and data storage.
 
@@ -35,15 +35,16 @@ Before running the application, you need to set up your Firebase configuration. 
 
 1. Create a Firebase project on the [Firebase Console](https://console.firebase.google.com/).
 2. Obtain your Firebase project's configuration object, including the API key, authentication domain, and database URL.
-3. Create a `.env` file in the root directory of the project.
-4. Add the following variables to the `.env` file and replace the placeholder values with your Firebase project's configuration:
+3. Create a `db_config.jsx` file in the root directory of the project.
+4. Add the following variables to the `db_config.jsx` file and replace the placeholder values with your Firebase project's configuration:
 
 ```plaintext
 REACT_APP_FIREBASE_API_KEY=YOUR_API_KEY
 REACT_APP_FIREBASE_AUTH_DOMAIN=YOUR_AUTH_DOMAIN
 REACT_APP_FIREBASE_DATABASE_URL=YOUR_DATABASE_URL
 ```
-
+Also add the New York Times API key after registering on https://developer.nytimes.com/apis
+NYT_API_KEY = YOUR_API_KEY
 ## Usage
 
 To start the development server and run the application, use the following command:
