@@ -184,7 +184,7 @@ const styles = {
   dropdownMenuItem: {
     cursor: "pointer",
     padding: "5px 0",
-    color: "blue",
+    color: "black",
     listStyleType: "none",
     margin: "10px",
   },

@@ -17,10 +17,6 @@ const BookItem = ({ book, onDeleteBook }) => {
     setShowMenu(!showMenu);
   };
 
-  const handleReadReviewClick = () => {
-    console.log("read");
-  };
-
   return (
     <div style={styles.container}>
       <div style={styles.bookItem}>

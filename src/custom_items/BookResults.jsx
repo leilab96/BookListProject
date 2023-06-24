@@ -19,14 +19,14 @@ const BookResults = ({ book }) => {
           setIsMessageVisible(true);
           setTimeout(() => {
             setIsMessageVisible(false);
-          }, 500);
+          }, 1000);
         } else {
           await addBookToUser(userId, book);
           setMessage(`${book.title} was added to your book list`);
           setIsMessageVisible(true);
           setTimeout(() => {
             setIsMessageVisible(false);
-          }, 500);
+          }, 1000);
           console.log("Book added to user's book list:", book, userId);
         }
       }

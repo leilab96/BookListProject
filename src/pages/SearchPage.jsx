@@ -7,7 +7,6 @@ import BookResults from "../custom_items/BookResults.jsx";
 const SearchPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [books, setBooks] = useState([]);
-  const [isSearchPerformed, setIsSearchPerformed] = useState(false);
   const [isSearchCompleted, setIsSearchCompleted] = useState(false);
   const API_ENDPOINT = "https://www.googleapis.com/books/v1/volumes";
   const inputRef = useRef(null);
@@ -50,8 +49,6 @@ const SearchPage = () => {
 
   const handleSearch = async () => {
     setSearchTerm(inputRef.current.value);
-    setIsSearchPerformed(true);
-    setIsSearchCompleted(false);
   };
 
   useEffect(() => {
@@ -70,10 +67,8 @@ const SearchPage = () => {
       }
     };
 
-    if (isSearchPerformed) {
-      fetchBooksData();
-    }
-  }, [searchTerm, isSearchPerformed]);
+    fetchBooksData();
+  }, [searchTerm]);
 
   return (
     <Layout>

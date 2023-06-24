@@ -3,8 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 import { styles } from "../static/loginStyle";
-import { signIn } from "../auth";
-import { resetPassword } from "../auth";
+import { signIn, resetPassword } from "../auth";
 
 const LoginPage = () => {
   const navigate = useNavigate();
@@ -23,7 +22,7 @@ const LoginPage = () => {
         navigate("home");
       }
     } catch (error) {
-      // Handle login error, such as displaying an error message
+      // Handle login error
       console.error("Login failed:", error.message);
     }
   };
